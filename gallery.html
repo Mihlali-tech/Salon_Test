@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Rooted &amp; Radiant</title>
+<meta name="description" content="A considered look at recent work by Rooted & Radiant, a private mobile hair studio in Pretoria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">Rooted &amp; Radiant <small>Braids &amp; Natural Hair, At Your Door</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html" class="current">Portfolio</a></li>
+      <li><a href="services.html">Experiences</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="book.html" class="nav-cta">Reserve your visit</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Portfolio</span>
+    <h1>A quiet record of our work.</h1>
+    <p>Browse by style below. Some sections mix real finished looks with a few Pinterest-style references, clearly marked, so you can see the direction even where I don't yet have my own photo of that exact look.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="gallery-tools" style="flex-direction:column; align-items:stretch; gap:16px;">
+      <div class="filter-row" id="styleFilterRow"></div>
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;">
+        <div class="filter-row" id="sourceFilterRow"></div>
+        <div class="filter-row" id="ownerBar"></div>
+      </div>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid" style="margin-top:26px;">
+      <!-- populated by JS; shows empty state until items are added -->
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <img id="lightboxImg" src="" alt="Enlarged portfolio photo">
+</div>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Rooted &amp; Radiant</h4>
+        <p>A mobile braiding &amp; hair studio bringing healthy hair and genuine care right to your door. Proudly serving Pretoria and surrounding areas.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:mihlali.ncayo@icloud.com">mihlali.ncayo@icloud.com</a>
+        <a href="tel:+27727031053">072 703 1053</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div>
+        <h4>Appointments</h4>
+        <p>Weekends for most styles, with select weekday slots for quicker styles.<br>Choose a date and time that works for you.</p>
+        <p>Pretoria, with travel to surrounding areas.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Rooted &amp; Radiant. All rights reserved.</span>
+      <span>Deposits secure your appointment and are non-refundable within 48 hours of your visit.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserve Your Visit — Rooted &amp; Radiant</title>
+<meta name="description" content="Reserve your private in-home hair experience with Rooted & Radiant. Choose your experience, your date, and secure it with a deposit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">Rooted &amp; Radiant <small>Braids &amp; Natural Hair, At Your Door</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Portfolio</a></li>
+      <li><a href="services.html">Experiences</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="book.html" class="nav-cta current">Reserve your visit</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Reserve</span>
+    <h1>Reserve your visit.</h1>
+    <p>A short, considered process — choose your experience, refine it to your preference, and secure your appointment with a deposit. We'll confirm with you personally.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="book-wrap">
+      <div class="book-side">
+        <div class="policy-card">
+          <h4>What to expect</h4>
+          <ul>
+            <li>I currently work weekends for most braided styles, with select weekday slots available for quicker styles like cornrows, free hand and treatments.</li>
+            <li>Longer protective styles — knotless braids, tribal braids and faux locs — are booked on weekends so there's no need to rush.</li>
+            <li>Available dates and times are shown once you've chosen your style.</li>
+          </ul>
+        </div>
+        <div class="policy-card">
+          <h4>Deposit &amp; hairpiece</h4>
+          <ul>
+            <li>A 30% deposit secures every appointment, paid securely through PayFast. It's deducted from your total, with the balance settled on the day.</li>
+            <li>I arrive with my own Londie&nbsp;London hairpiece as standard. Prefer to use your own hair or a different piece? Just note it when you reserve, at no extra charge.</li>
+            <li>Please give at least 48 hours' notice for any rescheduling.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="steps-track">
+          <div class="seg"><i id="segFill1"></i></div>
+          <div class="seg"><i id="segFill2"></i></div>
+          <div class="seg"><i id="segFill3"></i></div>
+          <div class="seg"><i id="segFill4"></i></div>
+        </div>
+        <div class="step-labels">
+          <span id="lbl1" class="active">Experience</span>
+          <span id="lbl2">Date &amp; time</span>
+          <span id="lbl3">Location</span>
+          <span id="lbl4">Your details</span>
+        </div>
+
+        <form class="booking-card" id="bookingForm" novalidate>
+
+          <!-- STEP 1 : EXPERIENCE + CUSTOMISE -->
+          <div class="step-panel active" data-step="1">
+            <h3 style="margin-bottom:18px;">Which experience would you like?</h3>
+            <div class="style-grid" id="styleGrid"></div>
+
+            <div class="customize-panel" id="customizePanel" style="display:none;">
+              <h4 id="customizeTitle">Refine your experience</h4>
+              <p class="sub">Adjust to your preference — the total updates as you choose.</p>
+              <div id="sizeOptionsWrap" style="display:none;">
+                <label class="field-label" id="sizeOptionsLabel">Fullness</label>
+                <div class="option-row" id="sizeOptionsRow"></div>
+              </div>
+              <div id="lengthOptionsWrap" style="display:none;">
+                <label class="field-label" id="lengthOptionsLabel">Length</label>
+                <div class="option-row" id="lengthOptionsRow"></div>
+              </div>
+              <div id="addonOptionsWrap" style="display:none;">
+                <label class="field-label">Add-ons</label>
+                <div class="option-row" id="addonOptionsRow"></div>
+              </div>
+              <div class="price-live">
+                <div>
+                  <span class="lbl">Your total</span><br>
+                  <span class="val" id="livePrice">—</span>
+                </div>
+                <div class="dep-val" id="liveDeposit">—</div>
+              </div>
+            </div>
+
+            <label class="field-label">Anything else we should know? (optional)</label>
+            <textarea id="styleNotes" rows="3" placeholder="e.g. hair type or texture, colour preference, a picture reference you'll send by WhatsApp, or if you'd like a weekend style done on a weekday — just mention it here and I'll do my best to accommodate."></textarea>
+            <div class="step-nav">
+              <span></span>
+              <button type="button" class="btn btn-primary" id="toStep2">Continue</button>
+            </div>
+          </div>
+
+          <!-- STEP 2 : DATE & TIME -->
+          <div class="step-panel" data-step="2">
+            <h3 style="margin-bottom:18px;">Choose a date &amp; time</h3>
+            <label class="field-label">Date</label>
+            <input type="date" id="bookingDate">
+            <div class="day-note" id="dayNote">Choose your experience first to see available days.</div>
+
+            <label class="field-label">Time</label>
+            <div class="time-grid" id="timeGrid"></div>
+
+            <div class="step-nav">
+              <button type="button" class="btn btn-ghost" data-back="1">Back</button>
+              <button type="button" class="btn btn-primary" id="toStep3">Continue</button>
+            </div>
+          </div>
+
+          <!-- STEP 3 : LOCATION -->
+          <div class="step-panel" data-step="3">
+            <h3 style="margin-bottom:18px;">Where should we come to?</h3>
+            <label class="field-label">Address</label>
+            <input type="text" id="locationInput" placeholder="Start typing your address…" autocomplete="off">
+            <div class="map-box" id="mapBox">Start typing your address above — it will pin on the map here.</div>
+
+            <label class="field-label">Hairpiece</label>
+            <div class="radio-row">
+              <label class="radio-pill selected" id="hpLondiePill">
+                <input type="radio" name="hairpiece" value="Londie London (standard)" checked> Londie London hairpiece (included)
+              </label>
+              <label class="radio-pill" id="hpOwnPill">
+                <input type="radio" name="hairpiece" value="Client's own hair/hairpiece"> I'll provide my own hair
+              </label>
+            </div>
+
+            <div class="step-nav">
+              <button type="button" class="btn btn-ghost" data-back="2">Back</button>
+              <button type="button" class="btn btn-primary" id="toStep4">Continue</button>
+            </div>
+          </div>
+
+          <!-- STEP 4 : DETAILS + PAY -->
+          <div class="step-panel" data-step="4">
+            <h3 style="margin-bottom:18px;">Your details</h3>
+            <div class="two-col">
+              <div>
+                <label class="field-label">Full name</label>
+                <input type="text" id="clientName" placeholder="Your name" required>
+              </div>
+              <div>
+                <label class="field-label">Cell number</label>
+                <input type="tel" id="clientPhone" placeholder="0XX XXX XXXX" required>
+              </div>
+            </div>
+            <label class="field-label">Email address</label>
+            <input type="email" id="clientEmail" placeholder="you@email.com" required>
+
+            <div class="summary-box" id="summaryBox"></div>
+
+            <div class="form-msg" id="formMsg"></div>
+
+            <div class="step-nav">
+              <button type="button" class="btn btn-ghost" data-back="3">Back</button>
+              <button type="submit" class="btn btn-primary" id="payBtn">Secure with deposit</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hidden form auto-submitted to PayFast on checkout -->
+<form id="payfastForm" action="https://sandbox.payfast.co.za/eng/process" method="post" style="display:none;"></form>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Rooted &amp; Radiant</h4>
+        <p>A mobile braiding &amp; hair studio bringing healthy hair and genuine care right to your door. Proudly serving Pretoria and surrounding areas.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:mihlali.ncayo@icloud.com">mihlali.ncayo@icloud.com</a>
+        <a href="tel:+27727031053">072 703 1053</a>
+      </div>
+      <div>
+        <h4>Appointments</h4>
+        <p>Weekends for most styles, with select weekday slots for quicker styles.<br>Choose a date and time that works for you.</p>
+        <p>Pretoria, with travel to surrounding areas.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Rooted &amp; Radiant. All rights reserved.</span>
+      <span>Deposits secure your appointment and are non-refundable within 48 hours of your visit.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
