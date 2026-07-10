@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Rooted &amp; Radiant</title>
+<meta name="description" content="A considered look at recent work by Rooted & Radiant, a private mobile hair studio in Pretoria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">Rooted &amp; Radiant <small>Braids &amp; Natural Hair, At Your Door</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html" class="current">Portfolio</a></li>
+      <li><a href="services.html">Experiences</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="book.html" class="nav-cta">Reserve your visit</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Portfolio</span>
+    <h1>A quiet record of our work.</h1>
+    <p>A first look at real finished styles below, with more added as they're ready.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Featured Work</span>
+      <h2>A few recent looks.</h2>
+      <p>These are permanent — they show for every visitor, on any browser, as soon as the site is hosted. To update one, just replace the matching file inside the <code>gallery</code> folder (keep the same file name), or edit the caption text directly in <code>gallery.html</code>.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure class="gallery-item" style="cursor:default;">
+        <img src="gallery/pic1.jpeg" alt="Featured photo 1">
+        <span class="tag">Knotless braids, thick/box</span>
+      </figure>
+      <figure class="gallery-item" style="cursor:default;">
+        <img src="gallery/pic2.jpeg" alt="Featured photo 2">
+        <span class="tag">cornrows - (straight back)</span>
+      </figure>
+      <figure class="gallery-item" style="cursor:default;">
+        <video controls preload="metadata" poster="gallery/vid1.mp4" style="width:100%; display:block;">
+          <source src="gallery/vid1.mp4" type="video/mp4">
+        </video>
+        <span class="tag">Cornrows - feedin</span>
+      </figure>
+      <figure class="gallery-item" style="cursor:default;">
+        <video controls preload="metadata" poster="gallery/video2-poster.jpg" style="width:100%; display:block;">
+          <source src="gallery/vid2.mp4" type="video/mp4">
+        </video>
+        <span class="tag">Tribal braid - with curls</span>
+      </figure>
+      <figure class="gallery-item" style="cursor:default;">
+        <video controls preload="metadata" poster="gallery/video3-poster.jpg" style="width:100%; display:block;">
+          <source src="gallery/vid3.mp4" type="video/mp4">
+        </video>
+        <span class="tag">Just Collection</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="divider-wrap"><hr class="braid-divider"></div>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">More Looks &amp; Inspiration</span>
+      <h2>A growing, filterable collection.</h2>
+      <p>This section is for adding more over time — browse by style, and toggle between real finished work and style inspiration. Note: unlike the Featured Work above, anything added here through the studio sign-in only appears in the browser it was added from, not to other visitors, until it's moved into the permanent gallery above.</p>
+    </div>
+    <div class="gallery-tools" style="flex-direction:column; align-items:stretch; gap:16px;">
+      <div class="filter-row" id="styleFilterRow"></div>
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;">
+        <div class="filter-row" id="sourceFilterRow"></div>
+        <div class="filter-row" id="ownerBar"></div>
+      </div>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid" style="margin-top:26px;">
+      <!-- populated by JS; shows empty state until items are added -->
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <img id="lightboxImg" src="" alt="Enlarged portfolio photo">
+</div>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Rooted &amp; Radiant</h4>
+        <p>A mobile braiding &amp; hair studio bringing healthy hair and genuine care right to your door. Proudly serving Pretoria and surrounding areas.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:mihlali.ncayo@icloud.com">mihlali.ncayo@icloud.com</a>
+        <a href="tel:+27727031053">072 703 1053</a>
+      </div>
+      <div>
+        <h4>Appointments</h4>
+        <p>Weekends for most styles, with select weekday slots for quicker styles.<br>Choose a date and time that works for you.</p>
+        <p>Pretoria, with travel to surrounding areas.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Rooted &amp; Radiant. All rights reserved.</span>
+      <span>Deposits secure your appointment and are non-refundable within 48 hours of your visit.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
